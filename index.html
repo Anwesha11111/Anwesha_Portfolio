@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anwesha Mohapatra — Applied ML &amp; Embedded Systems</title>
-<meta name="description" content="Anwesha Mohapatra — Applied ML &amp; Embedded Systems engineer. Field robotics, edge AI, and GenAI systems.">
+<title>Anwesha Mohapatra — AI/ML &amp; Full-Stack Engineer</title>
+<meta name="description" content="Anwesha Mohapatra — AI/ML and full-stack engineer. GenAI systems, production web apps, and applied ML, with embedded robotics as a sidework passion.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -311,10 +311,38 @@ section{position:relative;z-index:2;padding:110px 0;}
   letter-spacing:0.02em;
 }
 
+/* ===== SIDEWORK ===== */
+.sidework-head{
+  display:flex;align-items:center;gap:12px;margin:52px 0 22px;
+  font-family:var(--font-mono);font-size:12px;color:var(--muted);
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+.sidework-head::before, .sidework-head::after{content:'';flex:1;height:1px;background:var(--border);}
+.sidework-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+@media (max-width:820px){.sidework-grid{grid-template-columns:1fr;}}
+.side-card{
+  position:relative;background:transparent;border:1px dashed var(--border-strong);
+  border-radius:6px;padding:22px 24px;opacity:0.88;transition:opacity 0.25s, border-color 0.25s;
+}
+.side-card:hover{opacity:1;border-color:var(--teal);}
+.side-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px;}
+.side-name{font-family:var(--font-display);font-weight:600;font-size:16.5px;}
+.side-note{
+  font-family:var(--font-mono);font-size:9.5px;color:var(--muted);
+  border:1px solid var(--border-strong);border-radius:20px;padding:3px 9px;
+  text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;
+}
+.side-tagline{color:var(--dim);font-size:12.5px;margin-bottom:12px;}
+.side-bullets{list-style:none;margin-bottom:14px;}
+.side-bullets li{position:relative;padding-left:14px;color:var(--dim);font-size:13px;margin-bottom:6px;}
+.side-bullets li::before{content:'—';position:absolute;left:0;color:var(--muted);}
+.side-bullets li b{color:var(--text);font-weight:600;}
+
 /* ===== SKILLS ===== */
 .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
 @media (max-width:760px){.skills-grid{grid-template-columns:1fr;}}
 .skill-cat{background:var(--surface);padding:26px 26px;}
+.skill-cat.skill-side{opacity:0.82;}
 .skill-cat-title{
   font-family:var(--font-mono);font-size:11.5px;color:var(--muted);
   text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;
@@ -425,13 +453,14 @@ footer{
   <div class="hero-grid"></div>
   <div class="hero-radar"></div>
   <div class="wrap hero-content">
-    <div class="hero-eyebrow">APPLIED ML &amp; EMBEDDED SYSTEMS · FIELD ROBOTICS · EDGE AI</div>
+    <div class="hero-eyebrow">AI/ML &amp; GENAI SYSTEMS · FULL-STACK &amp; SOFTWARE DEV · PRODUCTION ENGINEERING</div>
     <h1 class="hero-title">Anwesha<br>Mohapatra</h1>
     <p class="hero-sub">
-      Computer Science undergraduate (<b>CGPA 9.56</b>) building at the intersection of
-      <b>applied machine learning</b>, <b>embedded systems</b>, and <b>field robotics</b> — from
-      payload software for satellite &amp; rocket missions to perception stacks for autonomous
-      vehicles and ML models running on hardware the size of a coin.
+      Computer Science undergraduate (<b>CGPA 9.56</b>) building across <b>applied machine learning</b>,
+      <b>full-stack web development</b>, and <b>production software systems</b> — retrieval and
+      multi-agent GenAI platforms, React/Node applications shipped in code-reviewed teams, and
+      automation pipelines that run in production. Robotics and embedded ML are an awesome sidework
+      I dabble in alongside all of this.
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="mailto:anweshamohapatra2005@gmail.com">Get in touch →</a>
@@ -441,8 +470,8 @@ footer{
     <div class="hero-stats">
       <div class="stat"><b><span class="count" data-target="9.56" data-decimals="2">0</span></b><span>CGPA · RVCE</span></div>
       <div class="stat"><b><span class="count" data-target="2">0</span></b><span>Degrees in progress</span></div>
-      <div class="stat"><b><span class="count" data-target="6" data-suffix="+">0</span></b><span>Shipped ML / GenAI projects</span></div>
-      <div class="stat"><b><span class="count" data-target="97" data-suffix="%">0</span></b><span>Edge model accuracy, NeuralGuard</span></div>
+      <div class="stat"><b><span class="count" data-target="8" data-suffix="+">0</span></b><span>Shipped ML / GenAI / web projects</span></div>
+      <div class="stat"><b><span class="count" data-target="60" data-suffix="%">0</span></b><span>Manual review cut, DOC-Pi</span></div>
     </div>
   </div>
 </header>
@@ -460,30 +489,34 @@ footer{
       <div class="about-text reveal">
         <p>
           I'm a Computer Science undergraduate at <b>RV College of Engineering</b>, running a
-          parallel <b>B.S. in Data Science &amp; Applications at IIT Madras</b>. My work sits
-          wherever real-world sensor data meets constrained hardware and messy pipelines —
-          rocket telemetry, autonomous-vehicle perception, and ML models squeezed onto an ESP32.
+          parallel <b>B.S. in Data Science &amp; Applications at IIT Madras</b>. I like building
+          complete systems — front to back — whether that's a React/Node web app in a
+          code-reviewed team, a retrieval-augmented pipeline over 50K+ documents, or a
+          multi-agent platform that automates a real workflow end to end.
         </p>
         <p>
-          On the software side, I build <b>GenAI and multi-agent systems</b> — retrieval pipelines,
-          orchestration engines, and self-healing automation — with the same end-to-end mindset:
-          data cleaning, training, deployment, and monitoring, not just notebooks.
+          On the software side, I build <b>full-stack applications</b> and <b>GenAI / multi-agent
+          systems</b> — REST APIs, retrieval pipelines, orchestration engines, and self-healing
+          automation — with the same mindset throughout: data cleaning, API design, deployment,
+          and monitoring, not just notebooks.
         </p>
         <p>
-          Outside coursework, I'm a payload engineer for a student satellite/rocket team, a
-          perception contributor for an autonomous vehicles club, and a research fellow working on
-          FPGA-based reconfigurable computing. I'm based in Bengaluru, India, and I'm currently
-          <b>open to full-time and internship roles</b> in applied ML, robotics, and edge AI.
+          Outside coursework, I intern across web development and applied ML research, and I
+          keep a fun sidework habit going in <b>embedded ML and field robotics</b> — training
+          models small enough to run on a coin-sized board and contributing to an autonomous
+          vehicles club. I'm based in Bengaluru, India, and I'm currently
+          <b>open to full-time and internship roles</b> in software engineering, full-stack
+          development, and applied ML.
         </p>
       </div>
       <div class="status-panel reveal">
         <div class="p-title">STATUS<span>LIVE</span></div>
         <div class="status-row"><span class="k">LOCATION</span><span class="v">Bengaluru, India</span></div>
         <div class="status-row"><span class="k">CURRENTLY</span><span class="v live">Open to roles</span></div>
-        <div class="status-row"><span class="k">FOCUS</span><span class="v">Applied ML · Robotics · Edge AI</span></div>
+        <div class="status-row"><span class="k">FOCUS</span><span class="v">AI/ML · Full-Stack · Production Systems</span></div>
         <div class="status-row"><span class="k">DEGREE 1</span><span class="v">B.E. CSE, RVCE — 2024–2028</span></div>
         <div class="status-row"><span class="k">DEGREE 2</span><span class="v">B.S. Data Science, IITM — 2023–present</span></div>
-        <div class="status-row"><span class="k">STACK</span><span class="v">Python · PyTorch · TensorFlow</span></div>
+        <div class="status-row"><span class="k">STACK</span><span class="v">React · Node.js · Python · PyTorch</span></div>
       </div>
     </div>
   </div>
@@ -495,21 +528,10 @@ footer{
     <svg class="trace reveal" viewBox="0 0 1000 36" preserveAspectRatio="none"><path d="M0 18 L120 18 L140 4 L160 32 L180 18 L400 18 L420 30 L440 6 L460 18 L1000 18"/></svg>
     <div class="section-head reveal">
       <span class="log-tag">02_experience.log</span>
-      <h2 class="section-title">Field work, not just fieldwork</h2>
-      <p class="section-desc">Applied research and full-stack engineering, from FPGA-based edge inference to production web apps.</p>
+      <h2 class="section-title">Internships across the stack</h2>
+      <p class="section-desc">Full-stack web development, applied ML research, and cross-functional work — shipped in real teams.</p>
     </div>
     <div class="timeline">
-
-      <div class="tl-item reveal">
-        <div class="tl-head">
-          <div><div class="tl-role">Technical Intern</div><div class="tl-org">Stemonef Enterprises, Bengaluru</div></div>
-          <span class="tl-date">MAR 2026 — PRESENT</span>
-        </div>
-        <ul class="tl-bullets">
-          <li>Researching <b>AI-driven systems</b> and <b>FPGA-based reconfigurable computing</b>; developing edge-deployable ML inference pipelines for real-time intelligent systems.</li>
-          <li>Reviewing current ML literature and implementing prototype experiments in a fast-paced applied research setting.</li>
-        </ul>
-      </div>
 
       <div class="tl-item reveal">
         <div class="tl-head">
@@ -517,7 +539,29 @@ footer{
           <span class="tl-date">MAR 2026 — APR 2026</span>
         </div>
         <ul class="tl-bullets">
-          <li>Built and shipped full-stack web applications using <b>React.js</b>, <b>Node.js/Express.js</b>, and RESTful APIs in a collaborative remote team with code-review workflows.</li>
+          <li>Built and shipped full-stack web applications using <b>React.js</b>, <b>Node.js/Express.js</b>, and RESTful APIs, implementing dynamic data rendering and client-server communication.</li>
+          <li>Collaborated in a code-reviewed remote team using Git, translating requirements into working, deployment-ready features.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-head">
+          <div><div class="tl-role">Technical Intern</div><div class="tl-org">Stemonef Enterprises, Bengaluru</div></div>
+          <span class="tl-date">MAR 2026 — PRESENT</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Review current ML literature and implement prototype experiments in a fast-paced applied research setting.</li>
+          <li>Develop and evaluate <b>edge-deployable ML inference pipelines</b> for real-time systems.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-head">
+          <div><div class="tl-role">Fundraising Intern</div><div class="tl-org">PledgeASmile Foundation</div></div>
+          <span class="tl-date">MAR 2026 — MAY 2026</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Supported fundraising and donor outreach initiatives for the foundation's ongoing campaigns and community programs.</li>
         </ul>
       </div>
 
@@ -531,32 +575,32 @@ footer{
     <svg class="trace reveal" viewBox="0 0 1000 36" preserveAspectRatio="none"><path d="M0 18 L120 18 L140 4 L160 32 L180 18 L400 18 L420 30 L440 6 L460 18 L1000 18"/></svg>
     <div class="section-head reveal">
       <span class="log-tag">03_projects.bin</span>
-      <h2 class="section-title">Six systems, end to end</h2>
-      <p class="section-desc">From edge inference on a $5 microcontroller to multi-agent retrieval over 50K+ documents — designed, trained, and deployed.</p>
+      <h2 class="section-title">Full-stack, AI/ML, and production systems</h2>
+      <p class="section-desc">From retrieval pipelines over 50K+ documents to multi-agent platforms and self-healing automation — designed, built, and deployed end to end.</p>
     </div>
 
     <div class="proj-grid">
 
       <div class="proj-card reveal">
         <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <div class="proj-top"><span class="proj-name">NeuralGuard</span><span class="proj-index">01</span></div>
-        <div class="proj-tagline">Real-time edge ML on resource-constrained hardware</div>
+        <div class="proj-top"><span class="proj-name">DOC-Pi</span><span class="proj-index">01</span></div>
+        <div class="proj-tagline">Retrieval-augmented ML pipeline at scale</div>
         <ul class="proj-bullets">
-          <li>Trained, optimized, and deployed a real-time ML model on an <b>ESP32</b> processing live sensor streams — <b>97.4% accuracy</b>, <b>&lt;2% false positives</b>, under tight compute and power constraints.</li>
-          <li>Built a <b>federated learning</b> setup for privacy-preserving model updates across distributed nodes, plus an <b>MQTT telemetry pipeline</b> for real-time ingestion and retraining.</li>
+          <li>Built a full-stack application with a <b>React</b> frontend and <b>FastAPI</b> backend around a hybrid <b>BM25 + FAISS</b> retrieval pipeline with cross-encoder re-ranking over a <b>50K+ document</b> corpus — end-to-end ownership of preprocessing, API design, and UI.</li>
+          <li>Cut manual review overhead by <b>60%</b> through the combined frontend/backend pipeline.</li>
         </ul>
-        <div class="tag-row"><span class="tag">TinyML</span><span class="tag">ESP32</span><span class="tag">TensorFlow</span><span class="tag">Federated Learning</span><span class="tag">MQTT</span></div>
+        <div class="tag-row"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">BM25</span><span class="tag">FastAPI</span><span class="tag">React</span></div>
       </div>
 
       <div class="proj-card reveal">
         <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <div class="proj-top"><span class="proj-name">LegalMind Assist</span><span class="proj-index">02</span></div>
-        <div class="proj-tagline">Large-scale retrieval-augmented workflow automation</div>
+        <div class="proj-top"><span class="proj-name">TenderMind</span><span class="proj-index">02</span></div>
+        <div class="proj-tagline">AI-powered government procurement co-pilot</div>
         <ul class="proj-bullets">
-          <li>Built a hybrid <b>BM25 + FAISS</b> retrieval pipeline with cross-encoder re-ranking over a <b>50K+ document</b> corpus — preprocessing, embedding generation, and vector indexing end to end.</li>
-          <li>Cut manual review overhead by <b>60%</b>; added persistent multi-turn memory via Redis and privacy-by-design data handling throughout.</li>
+          <li>Collaborated on a <b>4-person team</b> to build a multi-agent platform automating government tender evaluation — a Retriever/Reasoner/Critic/Synthesizer pipeline extracts criteria from tender documents and recommends winners with confidence scores.</li>
+          <li>Built across a <b>FastAPI/Python</b> backend and a <b>React 19 + TypeScript</b> frontend, with JWT auth, role-based dashboards, and document processing (PDF/DOCX/OCR) feeding the extraction pipeline.</li>
         </ul>
-        <div class="tag-row"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">BM25</span><span class="tag">FastAPI</span><span class="tag">React</span></div>
+        <div class="tag-row"><span class="tag">FastAPI</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">LangChain</span><span class="tag">Ollama</span></div>
       </div>
 
       <div class="proj-card reveal">
@@ -586,21 +630,35 @@ footer{
         <div class="proj-top"><span class="proj-name">HealMesh</span><span class="proj-index">05</span></div>
         <div class="proj-tagline">Self-healing enterprise automation mesh</div>
         <ul class="proj-bullets">
-          <li>Built an agentic AI system that autonomously detects, diagnoses, and remediates infrastructure failures using <b>local LLM inference</b> — air-gapped, zero data egress, SOC2-ready.</li>
-          <li>Implemented persistent memory so agents improve heuristics over time and build cluster-specific knowledge graphs.</li>
+          <li>Built a <b>TypeScript</b>-based operational dashboard and automation workflows wiring together <b>n8n</b>, an AI agent gateway, and <b>Kubernetes</b> so operational failures are detected, diagnosed, and remediated with human-in-the-loop approval.</li>
+          <li>Defined the JSON contracts between the webhook, workflow engine, and AI agent layer, and implemented <b>Helm/Kubernetes</b> deployment for scoped, auditable remediation actions.</li>
         </ul>
-        <div class="tag-row"><span class="tag">n8n</span><span class="tag">Kubernetes</span><span class="tag">Ollama</span><span class="tag">Python</span></div>
+        <div class="tag-row"><span class="tag">TypeScript</span><span class="tag">n8n</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">OpenClaw</span></div>
       </div>
 
-      <div class="proj-card reveal">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <div class="proj-top"><span class="proj-name">FPGA Edge Inference</span><span class="proj-index">06</span></div>
-        <div class="proj-tagline">Hardware-software co-design for reconfigurable computing</div>
-        <ul class="proj-bullets">
+    </div>
+
+    <div class="sidework-head reveal">sidework · embedded ml &amp; field robotics</div>
+    <div class="sidework-grid">
+
+      <div class="side-card reveal">
+        <div class="side-top"><span class="side-name">NeuralGuard</span><span class="side-note">For fun</span></div>
+        <div class="side-tagline">Real-time edge ML on resource-constrained hardware</div>
+        <ul class="side-bullets">
+          <li>Trained and deployed a real-time ML model on an <b>ESP32</b> processing live sensor streams — <b>97.4% accuracy</b> under tight compute and power constraints.</li>
+          <li>Added a <b>federated learning</b> setup for privacy-preserving updates and an <b>MQTT telemetry pipeline</b> for real-time ingestion.</li>
+        </ul>
+        <div class="tag-row"><span class="tag">TinyML</span><span class="tag">ESP32</span><span class="tag">TensorFlow</span></div>
+      </div>
+
+      <div class="side-card reveal">
+        <div class="side-top"><span class="side-name">FPGA Edge Inference</span><span class="side-note">Research</span></div>
+        <div class="side-tagline">Hardware-software co-design for reconfigurable computing</div>
+        <ul class="side-bullets">
           <li>Developed edge-deployable ML inference pipelines through hardware-software co-design as part of ongoing research at RVCE.</li>
           <li>Applied reconfigurable computing principles to real-time intelligent systems.</li>
         </ul>
-        <div class="tag-row"><span class="tag">FPGA</span><span class="tag">VHDL</span><span class="tag">Reconfigurable Computing</span></div>
+        <div class="tag-row"><span class="tag">FPGA</span><span class="tag">VHDL</span></div>
       </div>
 
     </div>
@@ -614,33 +672,33 @@ footer{
     <div class="section-head reveal">
       <span class="log-tag">04_skills.cfg</span>
       <h2 class="section-title">Toolkit</h2>
-      <p class="section-desc">Built for the seam between hardware and models — and the systems that ship them.</p>
+      <p class="section-desc">Full-stack development, applied ML/GenAI, and production infrastructure — with embedded systems as a side interest.</p>
     </div>
 
     <div class="skills-grid reveal">
       <div class="skill-cat">
-        <div class="skill-cat-title">Embedded / Robotics</div>
-        <div class="skill-tags"><span>TinyML</span><span>ESP32</span><span>Raspberry Pi</span><span>FPGA</span><span>MQTT Telemetry</span><span>Edge Inference</span><span>Hardware-Software Co-design</span></div>
+        <div class="skill-cat-title">Web Development</div>
+        <div class="skill-tags"><span>JavaScript</span><span>TypeScript</span><span>React.js (React 19)</span><span>Node.js / Express.js</span><span>REST APIs</span><span>HTML/CSS</span></div>
       </div>
       <div class="skill-cat">
-        <div class="skill-cat-title">ML / Deep Learning</div>
-        <div class="skill-tags"><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span><span>Model Fine-tuning</span><span>Evaluation</span></div>
+        <div class="skill-cat-title">AI/ML &amp; GenAI</div>
+        <div class="skill-tags"><span>LangChain</span><span>LangGraph</span><span>RAG Pipelines</span><span>Multi-Agent Systems</span><span>Ollama</span><span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span></div>
       </div>
       <div class="skill-cat">
-        <div class="skill-cat-title">GenAI / LLM Systems</div>
-        <div class="skill-tags"><span>LangChain</span><span>LangGraph</span><span>RAG Pipelines</span><span>Multi-Agent Systems</span><span>Prompt Engineering</span><span>OpenAI APIs</span><span>Ollama</span></div>
+        <div class="skill-cat-title">Backend &amp; Data</div>
+        <div class="skill-tags"><span>FastAPI</span><span>PostgreSQL</span><span>JWT Authentication</span><span>OCR</span><span>Data Modeling</span><span>API Design</span><span>Pandas</span><span>NumPy</span></div>
       </div>
       <div class="skill-cat">
-        <div class="skill-cat-title">Data &amp; Analysis</div>
-        <div class="skill-tags"><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span><span>Feature Engineering</span><span>SQL / PostgreSQL</span></div>
+        <div class="skill-cat-title">DevOps &amp; Automation</div>
+        <div class="skill-tags"><span>Kubernetes</span><span>Helm</span><span>n8n</span><span>OpenClaw</span><span>Docker</span><span>Linux CLI</span><span>Git / GitHub</span></div>
       </div>
       <div class="skill-cat">
-        <div class="skill-cat-title">MLOps / Cloud</div>
-        <div class="skill-tags"><span>GCP Cloud Run</span><span>AWS</span><span>Docker</span><span>FastAPI</span><span>Streamlit</span><span>MLflow</span></div>
+        <div class="skill-cat-title">Languages &amp; Practices</div>
+        <div class="skill-tags"><span>JavaScript</span><span>TypeScript</span><span>Python</span><span>SQL</span><span>Java</span><span>C / C++</span><span>Agile/Scrum</span><span>Unit Testing</span></div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-title">Languages &amp; Tools</div>
-        <div class="skill-tags"><span>Python</span><span>C / C++</span><span>Java</span><span>JavaScript</span><span>VHDL</span><span>Git</span><span>Linux CLI</span></div>
+      <div class="skill-cat skill-side">
+        <div class="skill-cat-title">Sidework: Embedded / Robotics</div>
+        <div class="skill-tags"><span>TinyML</span><span>ESP32</span><span>Raspberry Pi</span><span>FPGA</span><span>VHDL</span><span>MQTT Telemetry</span></div>
       </div>
     </div>
   </div>
@@ -658,12 +716,14 @@ footer{
     <div class="ach-cols">
       <div class="reveal">
         <ul class="ach-list">
-          <li><span class="ach-mark">01</span><div class="ach-body"><b>AI Vibe Sprint, Bangalore — 3rd Place</b></div></li>
-          <li><span class="ach-mark">02</span><div class="ach-body"><b>IEEE CSIS 2025 Ideathon — Winning team member</b></div></li>
-          <li><span class="ach-mark">03</span><div class="ach-body"><b>3rd Place — Hult Prize 2026 (RVCE)</b><span>AI-driven sustainability solution</span></div></li>
-          <li><span class="ach-mark">04</span><div class="ach-body"><b>98.6 Percentile — JEE Mains 2024</b></div></li>
-          <li><span class="ach-mark">05</span><div class="ach-body"><b>Rank 503 Internationally &amp; Zonal Rank 1</b><span>International Critical Thinking Olympiad</span></div></li>
-          <li><span class="ach-mark">06</span><div class="ach-body"><b>Presenter, TechTank RVCE</b><span>Computing &amp; AI topics; mentors peers in AI/ML and open-source</span></div></li>
+          <li><span class="ach-mark">01</span><div class="ach-body"><b>Runners-Up — Cyphersnova Genz Innovators Hackathon</b></div></li>
+          <li><span class="ach-mark">02</span><div class="ach-body"><b>AI Vibe Sprint, Bangalore — 3rd Place</b></div></li>
+          <li><span class="ach-mark">03</span><div class="ach-body"><b>IEEE CSIS 2025 Ideathon — Winning team member</b></div></li>
+          <li><span class="ach-mark">04</span><div class="ach-body"><b>3rd Place — Hult Prize 2026 (RVCE)</b><span>AI-driven sustainability solution</span></div></li>
+          <li><span class="ach-mark">05</span><div class="ach-body"><b>98.6 Percentile — JEE Mains 2024</b></div></li>
+          <li><span class="ach-mark">06</span><div class="ach-body"><b>Rank 503 Internationally &amp; Zonal Rank 1</b><span>International Critical Thinking Olympiad</span></div></li>
+          <li><span class="ach-mark">07</span><div class="ach-body"><b>Presenter, TechTank RVCE</b><span>Computing &amp; AI topics; mentors peers in AI/ML and open-source</span></div></li>
+          <li><span class="ach-mark">08</span><div class="ach-body"><b>Member, Team Elektra</b><span>Autonomous Vehicles Club, RVCE — contributing to the AI/perception stack (sidework)</span></div></li>
         </ul>
       </div>
 
@@ -696,7 +756,7 @@ footer{
         <div class="edu-degree">B.E. Computer Science &amp; Engineering</div>
         <div class="edu-school">RV College of Engineering, Bengaluru</div>
         <div class="edu-meta"><span>2024 — 2028</span><span>CGPA 9.56</span></div>
-        <div class="edu-course">Coursework: Machine Learning, AI Systems, Algorithms, Data Structures, Reconfigurable Computing</div>
+        <div class="edu-course">Coursework: Machine Learning, AI Systems, Algorithms, Data Structures, Statistics</div>
       </div>
       <div class="edu-card reveal">
         <div class="edu-degree">B.S. Data Science &amp; Applications</div>
@@ -713,8 +773,8 @@ footer{
   <div class="wrap">
     <div class="contact-box reveal">
       <span class="log-tag">07_contact.sh</span>
-      <h2 class="contact-title">Let's build something<br>that ships to hardware.</h2>
-      <p class="contact-desc">Open to full-time roles and internships in applied ML, embedded systems, and robotics. Fastest way to reach me is email.</p>
+      <h2 class="contact-title">Let's build something<br>that ships to production.</h2>
+      <p class="contact-desc">Open to full-time roles and internships in software engineering, full-stack development, and applied ML. Fastest way to reach me is email.</p>
       <div class="contact-actions">
         <a class="btn btn-primary" href="mailto:anweshamohapatra2005@gmail.com">anweshamohapatra2005@gmail.com</a>
         <button class="btn btn-outline" id="copyBtn">Copy email</button>
@@ -722,8 +782,9 @@ footer{
       <div class="copy-note" id="copyNote"></div>
       <div class="contact-links">
         <a href="https://github.com/Anwesha11111" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://anwesha11111.github.io/Portfolio" target="_blank" rel="noopener">Portfolio ↗</a>
+        <a href="https://anwesha11111.github.io/Anwesha_Portfolio/" target="_blank" rel="noopener">Portfolio ↗</a>
         <a href="mailto:anweshamohapatra2005@gmail.com">Email</a>
+        <a href="tel:+917981719866">+91 79817 19866</a>
       </div>
     </div>
   </div>
@@ -732,7 +793,7 @@ footer{
 <footer>
   <div class="wrap footer-inner">
     <span>© <span id="year"></span> Anwesha Mohapatra</span>
-    <span>Bengaluru, India · Built for applied ML &amp; robotics roles</span>
+    <span>Bengaluru, India · Full-stack, AI/ML &amp; production engineering</span>
   </div>
 </footer>
 
@@ -804,10 +865,11 @@ counters.forEach(el => cio.observe(el));
 // ticker content
 const tickerItems = [
   'CGPA 9.56 · RVCE + IIT Madras',
-  'Edge ML on ESP32 · 97.4% accuracy',
+  'Full-Stack Apps · React, Node.js, REST APIs',
   'RAG & Multi-Agent LLM Systems',
-  'FPGA-Based Reconfigurable Computing',
-  'Open to full-time & internship roles'
+  '60% Manual Review Reduction · DOC-Pi',
+  'Open to full-time & internship roles',
+  'Sidework: Edge ML on ESP32'
 ];
 const tickerEl = document.getElementById('tickerEl');
 const html = tickerItems.map(t => `<span>${t}</span>`).join('');
